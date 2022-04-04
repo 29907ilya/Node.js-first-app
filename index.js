@@ -8,6 +8,7 @@ const coursesRoutes = require('./routes/courses')
 
 const app = express();
 
+
 const hbs = exphbs.create({
   defaultLayout: 'main',
   extname: 'hbs'
