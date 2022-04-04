@@ -19,6 +19,8 @@ app.set('view engine', 'hbs')
 app.set('views', 'views') // second 'views' - folder name with pages in project!
 
 app.use(express.static('public'))
+app.use(express.urlencoded({extended: true}))
+
 app.use('/', homeRoutes)
 app.use('/add', addRoutes)
 app.use('/courses', coursesRoutes)
