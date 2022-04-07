@@ -38,4 +38,13 @@ router.get('/:id', async (req, res) => {
   })
 })
 
+router.post('/', async (req, res) => {
+  const courses = await Course.getAll()
+  res.render('courses', {
+    title: 'Courses',
+    isCourses: true,
+    courses
+  })
+})
+
 module.exports = router
