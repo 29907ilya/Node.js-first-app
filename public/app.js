@@ -4,3 +4,11 @@ document.querySelectorAll('.price').forEach( node => {
     style: 'currency'
   }).format(node.textContent)
 })
+
+const $cart = document.querySelector('#cart')
+
+if ($cart) {
+  $cart.addEventListener('click', event => {
+    
+  })
+}
