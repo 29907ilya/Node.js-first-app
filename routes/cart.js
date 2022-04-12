@@ -9,12 +9,19 @@ router.post('/add', async (req, res) => {
   res.redirect('/cart')
 })
 
+router.delete('/remove/:id', async (req, res) => {
+  const cart = await Cart.remove(req.params.id)
+  res.status(200).json(cart)
+})
+
 router.get('/', async (req, res) => {
-  // const cart = await Cart.fetch()
-  // res.render('cart', {
-  //   title: 'Shopping cart',
-  //   cart
-  // })
+  const cart = await Cart.fetch()
+  res.render('cart', {
+    title: 'Shopping cart',
+    isCart: true,
+    courses: cart.courses,
+    price: cart.price
+  })
 })
 
 

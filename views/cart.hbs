@@ -1,1 +1,32 @@
 <h1>Shopping cart</h1>
+
+<div id="cart">
+  {{#if courses.length}}
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Quantity</th>
+          <th>Actons</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each courses}}
+          <tr>
+            <td>{{title}}</td>
+            <td>{{count}}</td>
+            <td>
+              <button
+                class="btn btn-small js-remove"
+                data-id="{{id}}"
+              >del</button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <p><strong>Price: </strong><span class="price">{{price}}</span></p>
+  {{else}}
+    <p>Nothing here...</p>
+  {{/if}}
+</div>
