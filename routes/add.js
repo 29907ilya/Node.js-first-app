@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   res.render('add', {
     title: 'Add course',
     isAdd: true
-  })
+  }) 
 })
 
 router.post('/', async (req, res) => {

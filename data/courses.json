@@ -1,1 +1,14 @@
-[{"title":"Angular 8","price":"1200","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png","id":"e47f9a45-50d9-4abd-893b-45fec208c1b1"},{"title":"Vue.js","price":"800","img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png","id":"1413398e-4ecf-4050-9366-322cb7738bf3"}]
+[
+  {
+    "title": "Angular 8",
+    "price": "1200",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
+    "id": "e47f9a45-50d9-4abd-893b-45fec208c1b1"
+  },
+  {
+    "title": "Vue.js",
+    "price": "800",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png",
+    "id": "1413398e-4ecf-4050-9366-322cb7738bf3"
+  }
+]

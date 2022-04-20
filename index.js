@@ -26,12 +26,14 @@ app.use("/add", addRoutes);
 app.use("/courses", coursesRoutes);
 app.use("/cart", cartRoutes);
 
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
+
 const PORT = process.env.PORT || 3000;
 
 async function start() {
   try {
     const url =
-      "mongodb+srv://IlyaYarosh:6gwgy5RIS9PMy8K4@cluster0.6pqvm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+      `mongodb+srv://IlyaYarosh:6gwgy5RIS9PMy8K4@cluster0.6pqvm.mongodb.net/ITCoursesBase`;
     await mongoose.connect(url, { useNewUrlParser: true });
     app.listen(PORT, () => { 
       console.log(`Sever is runnin on port ${PORT}`);
@@ -42,14 +44,3 @@ async function start() {
 }
 
 start();
-
-     
-
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-// const uri = "mongodb+srv://IlyaYarosh:<password>@cluster0.6pqvm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
